@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MTG CSV Generator - Report</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <link href="static/css/bulma.min.css" rel="stylesheet" media="screen">
+  <link href="static/css/custom.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+  <section class="hero is-fullheight is-default is-bold">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="http://joaomarcuslf.com">
+              <img src="static/img/logo-hex.png" alt="Logo">
+
+              Joaomarcuslf
+            </a>
+
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <div class="tabs is-right">
+                <ul>
+                  <li class="is-active"><a href="http://joaomarcuslf.com">Meet me</a></li>
+                  <li><a href="https://github.com/joaomarcuslf2/mtg-csv-generator" target="blank">Help this project</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="hero-body">
+      <div class="container">
+        <article class="message is-info">
+          <div class="message-header">
+            <p>Information before you proceed</p>
+          </div>
+
+          <div class="message-body">
+            <p>
+              This report was made using <a href="https://scryfall.com/docs/api" target="blank">Scryfall API</a> alongside with some scripts. All this data is shared at <a
+                href="https://github.com/joaomarcuslf2/mtg-csv-generator" target="blank">this repo</a>.
+            </p>
+
+            <p>
+              If you have some information to add please send me a message, my links are into this page.
+            </p>
+
+            <p>
+              If any of the images at this pages are hard to see, you can open then in a new page or zoom it.
+            </p>
+
+            <p>
+              Hopefully this data will be useful or at least interesting to someone.
+            </p>
+          </div>
+        </article>
+
+        
+        <div class="card">
+          <div class="card-content">
+            <p class="title">
+              Card types drawn by Magali Villeneuve
+            </p>
+            <p class="subtitle">
+              The goal of this plot was to generate an bar graph with all types made by Magali Villeneuve, which is my favorite artist of MTG, I had to use some logic to extract the separators of the Type lines.
+            </p>
+          </div>
+
+          <div class="card-image">
+            <figure class="image">
+              <img src="/static/img/magali-types-graph.png" alt="Bar graph containing card types">
+            </figure>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <p class="title">
+              Comparation between types that are unique
+            </p>
+            <p class="subtitle">
+              The goal of this plot was to generate an bar graph with the amount of unique and not unique types for comparation.
+            </p>
+          </div>
+
+          <div class="card-image">
+            <figure class="image">
+              <img src="/static/img/unique-card-types.png" alt="Bar graph containing unique card types">
+            </figure>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <p class="title">
+              Artists that drawn 150 or above cards
+            </p>
+            <p class="subtitle">
+              Some artist have drawn more cards than others, but i&#39;ve made a couple of visualizations to see the difference between then.
+            </p>
+          </div>
+
+          <div class="card-image">
+            <figure class="image">
+              <img src="/static/img/artist-arts-above-150.png" alt="Bar graph containing artists and the number of cards drawn">
+            </figure>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <p class="title">
+              Artists that drawn between 150 and 100
+            </p>
+            <p class="subtitle">
+              Some artist have drawn more cards than others, but i&#39;ve made a couple of visualizations to see the difference between then.
+            </p>
+          </div>
+
+          <div class="card-image">
+            <figure class="image">
+              <img src="/static/img/artist-arts-between-150-100.png" alt="Bar graph containing artists and the number of cards drawn">
+            </figure>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <p class="title">
+              Artists that drawn between 100 and 75
+            </p>
+            <p class="subtitle">
+              Some artist have drawn more cards than others, but i&#39;ve made a couple of visualizations to see the difference between then.
+            </p>
+          </div>
+
+          <div class="card-image">
+            <figure class="image">
+              <img src="/static/img/artist-arts-between-100-75.png" alt="Bar graph containing artists and the number of cards drawn">
+            </figure>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <p class="title">
+              Artists that drawn between 75 and 50
+            </p>
+            <p class="subtitle">
+              Some artist have drawn more cards than others, but i&#39;ve made a couple of visualizations to see the difference between then.
+            </p>
+          </div>
+
+          <div class="card-image">
+            <figure class="image">
+              <img src="/static/img/artist-arts-between-75-50.png" alt="Bar graph containing artists and the number of cards drawn">
+            </figure>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <div class="container">
+        <div class="card">
+          <footer class="card-footer">
+            <p class="card-footer-item">
+              <span>
+                <a href="https://colab.research.google.com/github/joaomarcuslf2/mtg-csv-generator/blob/main/report_with_mtg_csv.ipynb">Check this project at Google Colab</a>
+              </span>
+            </p>
+
+            <p class="card-footer-item">
+              <span>
+                <a href="https://github.com/joaomarcuslf2/mtg-csv-generator">Repo Link</a>
+              </span>
+            </p>
+
+            <p class="card-footer-item">
+              <span>
+                <a href="/download">CSV Sheet</a>
+              </span>
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="static/scripts/index.js"></script>
+</body>
+
+</html>
