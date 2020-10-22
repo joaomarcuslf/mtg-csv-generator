@@ -6,7 +6,7 @@ import urllib.request
 actual_branch = os.popen('git rev-parse --abbrev-ref HEAD').read().replace('\n', '')
 
 os.system("git checkout gh-pages")
-os.system("git reset --hard " + actual_branch)
+os.system("git merge " + actual_branch)
 
 pages = {
     'health': '/health',
@@ -24,5 +24,5 @@ for page in pages:
 
 os.system("git add -A")
 os.system("git commit -m 'Generated files'")
-os.system("git push -f")
+os.system("git push")
 os.system("git checkout " + actual_branch)
