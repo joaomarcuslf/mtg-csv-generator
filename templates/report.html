@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ data.title }}</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <link href="static/css/bulma.min.css" rel="stylesheet" media="screen">
+  <link href="static/css/custom.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+  <section class="hero is-fullheight is-default is-bold">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="{{ data.sitename }}">
+              <img src="static/img/logo-hex.png" alt="Logo">
+
+              Joaomarcuslf
+            </a>
+
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <div class="tabs is-right">
+                <ul>
+                  <li class="is-active"><a href="{{data.sitename}}">Meet me</a></li>
+                  <li><a href="{{data.repo}}" target="blank">Help this project</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="hero-body">
+      <div class="container">
+        <article class="message is-info">
+          <div class="message-header">
+            <p>Information before you proceed</p>
+          </div>
+
+          <div class="message-body">
+            <p>
+              This report was made using <a href="https://scryfall.com/docs/api" target="blank">Scryfall API</a> alongside with some scripts. All this data is shared at <a
+                href="{{data.repo}}" target="blank">this repo</a>.
+            </p>
+
+            <p>
+              If you have some information to add please send me a message, my links are into this page.
+            </p>
+
+            <p>
+              If any of the images at this pages are hard to see, you can open then in a new page or zoom it.
+            </p>
+
+            <p>
+              Hopefully this data will be useful or at least interesting to someone.
+            </p>
+          </div>
+        </article>
+
+        {% for plot in data['plots'] %}
+        <div class="card">
+          <div class="card-content">
+            <p class="title">
+              {{plot.title}}
+            </p>
+            <p class="subtitle">
+              {{plot.subtitle}}
+            </p>
+          </div>
+
+          <div class="card-image">
+            <figure class="image">
+              <img src="{{plot.img}}" alt="{{plot.alt}}">
+            </figure>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <div class="container">
+        <div class="card">
+          <footer class="card-footer">
+            <p class="card-footer-item">
+              <span>
+                <a href="{{data.colab}}">Check this project at Google Colab</a>
+              </span>
+            </p>
+
+            <p class="card-footer-item">
+              <span>
+                <a href="{{data.repo}}">Repo Link</a>
+              </span>
+            </p>
+
+            <p class="card-footer-item">
+              <span>
+                <a href="{{data.csv}}">CSV Sheet</a>
+              </span>
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="static/scripts/index.js"></script>
+</body>
+
+</html>

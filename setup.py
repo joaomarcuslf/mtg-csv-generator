@@ -10,7 +10,6 @@ os.system("git reset --hard " + actual_branch)
 
 pages = {
     'health': '/health',
-    'index': '/',
     'report': '/report',
 }
 
