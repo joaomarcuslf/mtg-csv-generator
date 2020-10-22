@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
 
 import requests
 
@@ -8,10 +8,6 @@ app = Flask(__name__)
 def health():
     return "OK"
 
-@app.route('/report')
-def report():
-    return "WIP"
-
 @app.route('/')
 def home():
     response = requests.get('https://www.codewars.com/api/v1/users/joaomarcuslf')
@@ -20,6 +16,16 @@ def home():
     data = map_resquest_to_data(content)
 
     return render_template('index.html', data=data)
+
+@app.route('/report')
+def report():
+    filename = 'mtg-card-list-2020-10-22.csv'
+    return send_file(
+        'files/' + filename,
+        mimetype='text/csv',
+        attachment_filename=filename,
+        as_attachment=True
+    )
 
 def map_resquest_to_data(content):
     keys = [
