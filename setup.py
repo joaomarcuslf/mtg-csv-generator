@@ -24,5 +24,5 @@ for page in pages:
 
 os.system("git add -A")
 os.system("git commit -m 'Generated files'")
-os.system("git push")
+os.system("git push -f")
 os.system("git checkout " + actual_branch)
